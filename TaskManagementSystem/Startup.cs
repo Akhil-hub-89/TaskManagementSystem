@@ -15,7 +15,7 @@ namespace TaskManagementSystem
         {
             // Add Entity Framework Core with your connection string
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("Server=(localdb)\\mssqllocaldb;Database=YourDemoDb;Trusted_Connection=True;")));
 
             // Add ASP.NET Core Identity (if you need authentication)
             // services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
